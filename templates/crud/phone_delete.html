@@ -1,0 +1,10 @@
+{% extends 'phone/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2 class="text-center">Maxsulotni o'chirish</h2>
+    <form method="post">{% csrf_token %}
+        <p>{{Phone.title}}... nomli maxsulotni o'chirmoqchimisiz?</p>
+        <button type="submit" class="btn btn-info ml-2">Ha</button>
+    </form>
+{% endblock %}

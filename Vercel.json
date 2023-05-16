@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "phone_project/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdasize": "15mb",
+        "runtime": "python3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(. *)",
+      "dest": "phone_project/wsgi.py"
+    }
+  ]
+}
+
