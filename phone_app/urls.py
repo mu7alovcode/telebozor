@@ -3,7 +3,9 @@ from django.urls import path
 from .models import Contact
 from .views import phone_list, phone_detail, ContactPageView, HomePageView, SamsungPhoneView, ApplePhoneView, \
     XiaomiPhoneView, HuaweiPhoneView, LenovoPhoneView, ArtelPhoneView, SonyPhoneView, LGPhoneView, VivoPhoneView, \
-    NokiaPhoneView, OppoPhoneView, BoshqalarPhoneView,PhoneCreateView,PhoneUpdateView,PhoneDeleteView,SearchResultsList,phoneAllList
+    NokiaPhoneView, OppoPhoneView, BoshqalarPhoneView, PhoneCreateView, PhoneUpdateView, PhoneDeleteView, \
+    SearchResultsList, phoneAllList, \
+    Extiyot_qisimView, AksesuarView
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home_page'),
@@ -29,4 +31,8 @@ urlpatterns = [
     path('nokia-phone/', NokiaPhoneView.as_view(), name='nokia_page'),
     path('oppo-phone/', OppoPhoneView.as_view(), name='oppo_page'),
     path('boshqalar-phone/', BoshqalarPhoneView.as_view(), name='boshqalar_page'),
+
+    path('parts/', Extiyot_qisimView.as_view(), name='extiyot_qisimlar_page'),
+    path('aksesuar/', AksesuarView.as_view(), name='aksesuar_page'),
+
 ]

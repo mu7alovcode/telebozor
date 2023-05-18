@@ -236,3 +236,23 @@ class SearchResultsList(ListView):
         return Phone.objects.filter(
             Q(title__icontains=query) | Q(body__icontains=query))
 
+
+class Extiyot_qisimView(ListView):
+    model = Phone
+    template_name = 'parts/Extiyot_qisimla.html'
+    context_object_name = 'Extiyot_qisimla'
+
+    def get_queryset(self):
+        phone = self.model.published.all().filter(category__name='Extiyot_qisimla')
+        return phone
+
+
+class AksesuarView(ListView):
+    model = Phone
+    template_name = 'parts/Aksesuar.html'
+    context_object_name = 'Aksesuar'
+
+    def get_queryset(self):
+        phone = self.model.published.all().filter(category__name='Aksesuar')
+        return phone
+

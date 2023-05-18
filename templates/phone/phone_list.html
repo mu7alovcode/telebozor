@@ -6,8 +6,8 @@
 </head>
 <body>
 <H1>Barchasi</H1>
-{% for phone in phone_list %}
-<a href="{% url 'phone_detail_page' phone.pk%}"><li>{{ phone.title }}</li></a>
+{% for Phone in phone_list %}
+<a href="{% url 'phone_detail_page' phone.pk%}"><li>{{ Phone.title }}</li></a>
 
 {% endfor %}
 </body>
