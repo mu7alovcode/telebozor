@@ -256,7 +256,7 @@
     height:400px;" src="{{ Phone.image1.url }}" alt=""></a>
                 </div>
                 <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="{% url 'detail_page' Phone.pk %}"><h5>{{Phone.title | truncatechars:35}}</h5></a>
+                    <a class="h6 text-decoration-none text-truncate" href="{% url 'detail_page' Phone.pk %}"><h5>{{Phone.title | truncatechars:25}}</h5></a>
                     <div class="d-flex align-items-center justify-content-center mt-2">
                         <p>{{Phone.price}} so'm <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for Phone %}</p>
                     </div>
@@ -281,8 +281,8 @@
                 <img class="img-fluid" src="{% static 'img/spare.jpg.png' %}" alt="">
                 <div class="offer-text">
                     <h6 class="text-white text-uppercase">Sifatli</h6>
-                    <h3 class="text-white mb-3">Mobile jihozlar</h3>
-                    <a class="btn btn-primary" href="#">Barchasini ko'rish</a>
+                    <h3 class="text-white mb-3">Extyot qisimlar</h3>
+                    <a class="btn btn-primary" href="{% url 'extiyot_qisimlar_page' %}">Barchasini ko'rish</a>
                 </div>
             </div>
         </div>
@@ -291,8 +291,8 @@
                 <img class="img-fluid" src="{% static 'img/acses.jpg' %}" alt="">
                 <div class="offer-text">
                     <h6 class="text-white text-uppercase">Sifatli</h6>
-                    <h3 class="text-white mb-3">Mobile jihozlar</h3>
-                    <a class="btn btn-primary" href="#">Barchasini ko'rish</a>
+                    <h3 class="text-white mb-3">Aksesuar</h3>
+                    <a class="btn btn-primary" href="{% url 'aksesuar_page' %}">Barchasini ko'rish</a>
                 </div>
             </div>
         </div>
